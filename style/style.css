@@ -52,7 +52,6 @@ p {
     --color-grey-accent: #8B8F9B;
     --color-grey-text: #565A66;
     --gradient-main: linear-gradient(90deg, #0060FF 0%, #01B9FF 100%);
-
 }
 
 body {
@@ -115,6 +114,7 @@ body {
     align-items: center;
     column-gap: 32px;
     font-size: 18px;
+    font-weight: 600;
 }
 
 .preview-section {
@@ -122,7 +122,8 @@ body {
     position: relative;
     height: 100%;
     overflow: hidden;
-    background: var(--gradient-main);
+    background: linear-gradient(180deg, #0060FF 0%, #2476FF 50%, #01B9FF 100%);
+
 }
 
 .bg-animation {
@@ -233,7 +234,6 @@ body {
 .description {
     font-size: clamp(32px, 2.91vw, 56px);
     font-weight: 600;
-    padding: 320px 0;
     line-height: clamp(42px, 3.5vw, 67.2px);
     letter-spacing: -0.1vw;
     background: var(--color-white);
@@ -242,7 +242,7 @@ body {
     align-items: center;
     position: relative;
     padding: 30vw 0.694vw 10vw 0.694vw;
-    height: 500vw;
+    height: 100vw;
 }
 
 .description-wrapper {
@@ -399,6 +399,7 @@ body {
     display: flex;
     font-weight: 700;
     font-size: 24px;
+    line-height: 1.16;
     text-align: start;
     align-items: center;
     padding: 12px 32px 12px 12px;
