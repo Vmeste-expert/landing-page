@@ -28,8 +28,8 @@ a {
 }
 
 h2 {
-    font-size: 64px;
-    letter-spacing: -4px;
+    font-size: clamp(56px, 3.33vw, 64px);
+    letter-spacing: -0.04vw;
     line-height: 1;
 }
 
@@ -58,7 +58,8 @@ p {
 body {
     font-family: 'Manrope', sans-serif;
     font-weight: 500;
-    font-size: 20px;
+    font-size: clamp(16px, 1.04vw, 20px);
+    background: #01B9FF;
 }
 
 .container {
@@ -80,7 +81,6 @@ body {
     z-index: 5;
     width: 100%;
     inset: auto 0;
-    
 }
 
 .header_inner {
@@ -90,7 +90,6 @@ body {
     color: var(--color-white);
     padding: 16px 32px;
     transition: 0.2s ease-in;
-
 }
 
 .header__logo {
@@ -115,6 +114,7 @@ body {
     display: flex;
     align-items: center;
     column-gap: 32px;
+    font-size: 18px;
 }
 
 .preview-section {
@@ -140,7 +140,7 @@ body {
 }
 
 .preview-section__title-block {
-    padding: 248px 0 110px 0;
+    padding: 172px 0 120px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -151,18 +151,18 @@ body {
 }
 
 .title_text {
-    font-size: 88px;
+    font-size: clamp(60px, 4.58vw, 88px);
     color: var(--color-white);
     text-align: center;
     max-width: 730px;
     letter-spacing: -4px;
     font-weight: 700;
     line-height: 1;
-    margin-bottom: 36px;
+    margin-bottom: 64px;
 }
 
 .title_buttons {
-    margin-bottom: 120px;
+    margin-bottom: 140px;
 }
 
 .join-btn {
@@ -181,8 +181,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 1110px;
-    margin-top: -48px;
     border-radius: 48px 48px 0 0;
 }
 
@@ -233,12 +231,25 @@ body {
 }
 
 .description {
-    font-size: 56px;
+    font-size: clamp(32px, 2.91vw, 56px);
     font-weight: 600;
     padding: 320px 0;
-    line-height: 67.2px;
+    line-height: clamp(42px, 3.5vw, 67.2px);
     letter-spacing: -0.1vw;
-    
+    background: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 30vw 0.694vw 10vw 0.694vw;
+    height: 500vw;
+}
+
+.description-wrapper {
+    max-width: 69.44vw;
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .description__word {
@@ -250,11 +261,15 @@ body {
     opacity: 1;
 }
 
+.utility {
+    background: var(--color-white);
+}
+
 .utility__wrapper {
     display: flex;
     column-gap: 64px;
     justify-content: space-between;
-    padding: 80px 0 240px 0
+    padding: 80px 12px 240px 12px
 }
 
 .utility__text-content {
@@ -265,10 +280,6 @@ body {
 
 .utility-title {
     margin-bottom: 48px;
-}
-
-.time-utility-title{
-    width: 34.58vw;    
 }
 
 .utility__subtitle-block {
@@ -308,6 +319,15 @@ body {
     position: relative;
 }
 
+.image-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-grey-bg);
+    border-radius: 48px;
+    width: 45%;
+}
+
 .text-item,
 .image-item  {
     position: absolute;
@@ -315,24 +335,33 @@ body {
     transition: 0.3s ease-in;
 }
 
-.text-item {
-    width: 34.58vw;
-}
+.image-item {
+    display: flex;
+    justify-content: center;
+} 
 
 .visible {
     opacity: 1;
     transition: 1s ease-in-out;
 }
 
+.time {
+    background: var(--color-white);
+    padding-bottom: 1px;
+}
+
 .time__wrapper{
     display: flex;
+    justify-content:space-between;
     column-gap: 64px;
+    padding: 0 12px;
     margin-bottom: 288px;
 }
 
 .principe {
     background-color: var(--color-grey-bg);
     padding: 160px 0 208px 0;
+    margin-top: -48px;
     border-top-right-radius: 48px;
     border-top-left-radius: 48px;
 }
@@ -390,11 +419,11 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 48px;
-    padding: 240px 0;
+    padding: 240px 12px;
 }
 
 .FAQ__title-block {
-width: 20.83vw;
+    width: 42%;
 }
 
 .FAQ__title {
@@ -410,7 +439,7 @@ width: 20.83vw;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    width: 43.33vw;
+    width: 60%;
 }
 
 .FAQ__answers_item {
@@ -429,7 +458,7 @@ summary::marker {
 }
 
 .FAQ-question {
-    padding: 32px;
+    padding: 32px 60px 32px 32px;
     position: relative;
     font-size: 24px;
     font-weight: 700;
@@ -466,6 +495,7 @@ details[open] .FAQ-question  {
 
 .worksheet {
     background-color: var(--color-grey-bg);
+    margin-top: -48px;
     border-top-right-radius: 48px;
     border-top-left-radius: 48px;
 }
@@ -476,12 +506,12 @@ details[open] .FAQ-question  {
     align-items: center;
     text-align: center;
     padding: 160px 0 24px;
-    max-width: 740px;
     margin: 0 auto;
 }
 
 .worksheet__title {
     margin-bottom: 48px;
+    max-width: 810px;
 }
 
 .worksheet__title span {
@@ -492,6 +522,7 @@ details[open] .FAQ-question  {
     margin-bottom: 16px;
     color: var(--color-black-default);
     font-weight: 600;
+    max-width: 740px;
 }
 
 .worksheet__disclaimer {
@@ -510,4 +541,42 @@ details[open] .FAQ-question  {
 
 iframe {
     border-radius: 24px;
+}
+
+@media (max-width: 1140px) {
+    h3 {
+        font-size: 18px;
+    }
+
+    .active::before{
+        top: 34px;
+    }
+}
+
+@media (max-width: 1070px) {
+    .principe__steps {
+        flex-direction: column;
+    }
+
+    .utility-image {
+        max-width: 80%;
+    }
+
+    .FAQ__inner {
+    flex-direction: column;
+    }
+
+    .FAQ__title {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .FAQ__title-block,
+    .FAQ__answers_list{
+    width: 100%;
+    }
+
+    .FAQ__answers_item {
+        max-width: 100%;
+    }
 }
