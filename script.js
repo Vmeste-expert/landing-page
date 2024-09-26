@@ -15,13 +15,13 @@ let textModuleHeight = modules[2].offsetHeight;
 let firstModules = firstModuleHeight + secondModuleHeight
 
 let currentWordIndex = 0;
-let textOffset = (window.innerHeight * 0.4)
+let textOffset = (window.innerHeight * 0.04)
 let textScroll = textModuleHeight - window.innerHeight
 let scrollPerWord = textScroll / word.length
 let startTextScroll = firstModules - textOffset
 
 window.onscroll = function() {
-    currentWordIndex = Math.floor((window.scrollY - startTextScroll) / scrollPerWord)
+    currentWordIndex = Math.floor((window.scrollY - startTextScroll) * 1.5 / scrollPerWord)
     if (currentWordIndex < 0) {
         currentWordIndex = 0
     } else if (currentWordIndex > word.length - 1) {
