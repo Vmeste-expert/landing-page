@@ -391,12 +391,12 @@ body {
     gap: 16px;
     justify-items: center;
     margin-bottom: 48px;
+    font-size: clamp(18px, 1.25vw, 24px)
 }
 
 .principe__steps-item {
     display: flex;
     font-weight: 700;
-    font-size: 24px;
     line-height: 1.16;
     text-align: start;
     align-items: center;
@@ -411,7 +411,7 @@ body {
     background: var(--color-white);
     border-top-right-radius: 48px;
     border-top-left-radius: 48px;
-    margin-top: -36px;
+    margin-top: -44px;
 }
 
 .FAQ__inner {
@@ -459,7 +459,7 @@ summary::marker {
 .FAQ-question {
     padding: 32px 64px 32px 32px;
     position: relative;
-    font-size: 24px;
+    font-size: clamp(18px, 1.25vw, 24px);
     font-weight: 700;
     letter-spacing: -0.02vw;
 }
@@ -630,6 +630,10 @@ iframe {
         display: none;
     }
 
+    .bg-animation {
+        display: none;
+    }
+
     iframe {
         width: 100vw;
     }
@@ -728,3 +732,20 @@ iframe {
         top: 30px;
     }
 }
+
+@media (max-width: 380px) {
+    .utility__text {
+        margin-bottom: 380px;
+    }
+}
+
+
+/* animation: animateBg 10s linear infinite;
+  background-image: linear-gradient(0deg,#0060ff,#2476ff,#01b9ff,#0060ff,#2476ff);
+  background-size: 100% 400%;
+}
+@keyframes animateBg {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 0% 100%; }
+}
+ */
