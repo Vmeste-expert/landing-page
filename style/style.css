@@ -639,7 +639,7 @@ iframe {
         display: none;
     }
 
-    .bg-animation {
+    .bg-animation iframe {
         display: none;
     }
 
@@ -687,16 +687,29 @@ iframe {
     }
 }
 
-
 @media (max-width: 500px) {
     .header__container {
         position: absolute;
     }
 
+    .header_inner-scrolled {
+        background-color: transparent;
+    }
+
+    .header__logo-scrolled {
+        background-color: rgba(255, 255, 255, 0.16);
+    }
+
     .preview-section__title-block {
         justify-content: space-around;
         padding: 88px 20px 20px 20px;
-        height: 100vh;
+        height: max(640px, 100vh);
+        backdrop-filter: none;
+        background: none;
+        background-image: url(/images/NoiseTexture.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
     }
 
     .button {
