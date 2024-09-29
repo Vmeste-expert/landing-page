@@ -361,7 +361,7 @@ body {
     display: flex;
     justify-content:space-between;
     column-gap: 64px;
-    padding: 0 12px;
+    padding: 0 20px;
     margin-bottom: 288px;
 }
 
@@ -708,6 +708,10 @@ iframe {
         margin-bottom: 20px;
     }
 
+    .title-image {
+        border-radius: 20px;
+    }
+
     .title_buttons {
         margin-bottom: 20px;
     }
@@ -717,12 +721,22 @@ iframe {
         border-radius: 32px 32px 0 0;
     }
 
+    .request-join {
+        padding: 0 20px;
+        width: 100vw;
+    }
+
+    .request-join .button {
+        display: flex;
+        justify-content: center;
+    }
+
     .description {
         font-size: clamp(24px, 2.91vw, 56px);
         line-height: clamp(32px, 3.5vw, 67.2px);
-        height: 100vh;
+        height: 100%;
         border-radius: 32px 32px 0 0;
-        padding: 20vw 0.694vw 20vw 0.694vw;
+        padding: 48px 0.694vw 48px 0.694vw;
         justify-content: center;
     }
 
@@ -745,6 +759,10 @@ iframe {
         padding: 0 12px;
     }
 
+    .utility__wrapper {
+        padding: 0 20px 88px 20px;
+    }
+
     .utility-title {
         margin-bottom: 32px;
     }
@@ -760,6 +778,7 @@ iframe {
 
     .image-list {
         height: 350px;
+        border-radius: 32px;
     }
 
     .image-item {
