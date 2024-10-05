@@ -127,13 +127,6 @@ body {
 
 }
 
-.bg-animation {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    z-index: -10;
-}
-
 .title-image {
     width: 100%;
     border-radius: 24px;
@@ -148,8 +141,10 @@ body {
     align-items: center;
     margin: 0 auto;
     backdrop-filter: blur(10px);
-    background: linear-gradient(180deg, rgba(0, 96, 255, 0) 25%, rgba(36, 118, 255, 0.5) 50%, #01B9FF 100%);
-    ;
+    background-image: url(/images/NoiseTextureBig.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
 }
 
 .title_text {
@@ -636,10 +631,6 @@ iframe {
     }
 
     .header__nav {
-        display: none;
-    }
-
-    .bg-animation iframe {
         display: none;
     }
 
